@@ -6,17 +6,21 @@ const Receptek = () => {
         { id: '3', nev: 'Sushi tál', kateg: 'Japán', leiras: 'Használj friss halat...' }
     ];
     return (
-        <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">Receptek</h2>
-            <ul>
+        <div className="container mt-4">
+            <h2 className="h2 mb-4">Receptek</h2>
+            <div className="row">
                 {receptek.map((recept) => (
-                    <li key={recept.id} className="mb-4 border-b pb-2">
-                        <h3 className="text-xl font-semibold">{recept.nev}</h3>
-                        <p className="italic">Kategória: {recept.kateg}</p>
-                        <p>{recept.leiras}</p>
-                    </li>
+                    <div key={recept.id} className="col-md-6 col-lg-4 mb-4">
+                        <div className="card h-100">
+                            <div className="card-body">
+                                <h3 className="card-title">{recept.nev}</h3>
+                                <p className="text-muted">Kategória: {recept.kateg}</p>
+                                <p className="card-text">{recept.leiras}</p>
+                            </div>
+                        </div>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

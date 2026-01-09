@@ -1,8 +1,8 @@
 const Header = () => {
     return (
-        <header className="bg-blue-600 text-white p-4">
-            <h1 className="text-3xl font-bold">Receptek App</h1>
-            <p className="text-lg">Fedezd fel a legjobb recepteket!</p>
+        <header className="bg-primary text-white p-4 mb-4">
+            <h1 className="display-4">Receptek App</h1>
+            <p className="lead">Fedezd fel a legjobb recepteket!</p>
         </header>
     );
 };

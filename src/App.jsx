@@ -1,10 +1,11 @@
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
+import Home from "./pages/Home";
 import Receptek from "./pages/Receptek";
 import Kereses from "./pages/Kereses";
 
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
         <Navbar />
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="/receptek" />} />
-          <Route path="/receptek" element={<Receptek />} />
+          <Route path="/" element={<Home />} />
           <Route path="/kereses" element={<Kereses receptek={receptek} />} />
+          <Route path="/receptek" element={<Receptek />} />
         </Routes>
         <Footer />
       </div>
