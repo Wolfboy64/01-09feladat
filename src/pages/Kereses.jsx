@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Notfound from './Notfound';
 
 export default function Kereses({ receptek }) {
     const [filtered, setFiltered] = useState(receptek);
@@ -38,7 +39,7 @@ export default function Kereses({ receptek }) {
                         ))}
                     </div>
                 ) : (
-                    <p className="text-muted">Nincs találat a keresési feltételekhez</p>
+                    <Notfound />
                 )}
             </div>
         </div>
